@@ -23,6 +23,7 @@ body *{
 
 header {
     margin-top: 32px;
+    height: 120px;
 }
 
 header div {
@@ -113,4 +114,48 @@ section li:hover {
     border-radius: 50%;
     width: 70px;
     border: 1px solid #443E54;
+}
+
+header div {
+    animation: fromTop .3s .1s backwards;
+    /* animation-delay: 1s; */
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+main section {
+    animation: fromBottom .7s backwards;
+}
+
+main section:nth-child(1){
+    animation-delay: 0;
+}
+
+main section:nth-child(2){
+    animation-delay: .4s;
+}
+main section:nth-child(3){
+    animation-delay: .8s;
+}
+
+@keyframes fromBottom {
+    from {
+        
+        transform: translateY(50px)
+    }
+
+    to {
+        
+        transform: translateY(0)
+    }
 }
